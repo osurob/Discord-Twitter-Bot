@@ -37,5 +37,6 @@ The general requirements are as follows.
 3. Go to https://developer.twitter.com/en/apps and create new app, fill out information and get Consumer key/secret and access token/secret.
 4. Open the twitterSentiment.py file and change the consumer_key, consumer_secret, access_token, and access_key to the twitter app api information you got from the previous step.
 5. Go to https://discordapp.com/developers/applications make a new application, and a new bot, set admin privalleges on it, go to the Bot tab and copy the bot key and paste it in the main.py file here: client.run('DISCORD BOT KEY'). 
-5. Open terminal and run main.py. <code>python3 main.py</code>
+6. Go through main.py and read all of the comments, make sure everything has been replaced with actual values.
+7. Open terminal and run main.py. <code>python3 main.py</code>
 
