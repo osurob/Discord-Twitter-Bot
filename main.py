@@ -30,9 +30,10 @@ async def on_ready():
 async def background1():
 		#Initiation grabs first 2 tweets
 		#screen_name is the Twitter handle you wish to follow
-		bno_tweets = api.user_timeline(screen_name ='TWITTER ACCOUNT NAME TO TRACK',count=2, tweet_mode="extended")
+		bno_tweets = api.user_timeline(screen_name ='TWITTER ACCOUNT HANDLE TO TRACK',count=2, tweet_mode="extended")
 		bno_tweets = [tweet.id for tweet in bno_tweets]
 		for tweet in bno_tweets:
+			#check if tweet is already in the stack
 			if tweet not in bno:
 				#append and pop to stack if new post was made
 				bno.append(tweet)
@@ -41,6 +42,7 @@ async def background1():
 				#On the next line, replace with Twitter handle to follow
 				message = 'https://twitter.com/REPLACE WITH TWITTER HANDLE/status/'+str(tweet)
 				#Replace with channel id
+				#To get channel id go to Discord and right click on the channel you wish to send messages to
 				channel = client.get_channel(ENTER CHANNEL ID HERE)
 				await channel.send(message)
 
