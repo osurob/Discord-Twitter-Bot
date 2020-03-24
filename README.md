@@ -1,8 +1,8 @@
 # Discord-Twitter-Bot
 A discord bot that will send out messages everytime a specified user on Twitter has posted a new tweet
 
-## Dataset information
-In order to gather information from Twitter I used the tweepy API to query tweets. 
+## Twitter API 
+In order to gather information from Twitter I used the tweepy API to query tweets. It is necessary to have a Twitter developer account if you do not have one you can make one here: https://developer.twitter.com/en/apps. 
 
 Replace screen_name here with the name of the Twitter handle you wish to get post notifications for. 
 <code> cnbc_tweets = api.user_timeline(screen_name ='CNBCnow',count=2, tweet_mode="extended") </code>
